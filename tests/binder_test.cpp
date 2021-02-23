@@ -1079,7 +1079,8 @@ TEST_F(BinderTest, TetherGetStats) {
     for (const auto& path : { IPTABLES_PATH, IP6TABLES_PATH }) {
         delTetherCounterValues(path, intIface1, extIface1);
         delTetherCounterValues(path, intIface2, extIface2);
-        if (path == IP6TABLES_PATH) {
+       // if (path == IP6TABLES_PATH) {
+       if(strcmp(path,IP6TABLES_PATH) == 0) {//for riscv64
             delTetherCounterValues(path, intIface3, extIface2);
         }
     }
