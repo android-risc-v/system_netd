@@ -31,7 +31,7 @@ cc_binary {
         "-Wextra",
     ],
     sanitize: {
-        cfi: true,
+        cfi: false,
         memtag_heap: true,
     },
 }

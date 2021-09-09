@@ -294,7 +294,7 @@ cc_binary {
         "oem_iptables_hook.cpp",
     ],
     sanitize: {
-        cfi: true,
+        cfi: false,
     },
 }
 
@@ -324,7 +324,7 @@ cc_binary {
         "NdcDispatcher.cpp",
     ],
     sanitize: {
-        cfi: true,
+        cfi: false,
         memtag_heap: true,
     },
 }
